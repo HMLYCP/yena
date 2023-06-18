@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+    
+    <form onreset>
+        <input type="text">
+        <input type="reset" value="여기"; onclick="window.open('cat.png')";>
+    </form>
+    
+    <!--  
+        (1) text 박스와 reset 버튼을 만든다.
+        (2) reset 버튼의 이름은 여기로 적는다.
+        (3) reset 버튼을 누르면 고양이 이미지가 나온다.
+        (4) 아래와 같이 안내한다. (*참고: 혜미리예채파는 입력하지 않아도 된다)
+        “텍스트박스에 "혜미리예채파"를 입력하고 여기를 누르세요.”
+        (5) 4번 문장의 여기를 누르면 "제출완료되었습니다" 문구가 나온다.
+     -->
+    <h1>혜미리예채파</h1>
+    
+</body>
+위 텍스트박스에 혜미리예채파를 입력하고 <a onclick="alert('제출완료되었습니다')">여기</a>를 누르세요.
+<script>
+    function foo() {
+        console.log('123');
+    }
+
+    function bar() {
+        
+    }
+</script>
+</html>
