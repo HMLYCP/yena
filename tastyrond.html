@@ -1,0 +1,108 @@
+<!-- 
+        연습해야 하는 대상: if, type, button, onclick, media@, style & div
+
+        (1) 10가지 맛집을 적는다.
+        (2) 맛집은 한식(kor), 일식(jap), 기타(other)로 분류한다.
+        (3) 최애 맛집(best)을 표시한다.
+            a. 최애 맛집들은 class를 best로 정의한다.
+            b. style 공통 값으로 red, bold로 표시한다.
+        (4) HOME, 한식, 일식, 기타, 최애 버튼을 만든다.
+            a. 버튼을 누르면 페이지 이동은 없지만, 표출되는 내용이 변경된다. (각 분류를 표출)
+                - 버튼을 누른다. -> if, onclick
+                - 만약 class 값이 kor로 지정된 코드는 '표시'하고 나머지는 '숨김'한다.
+            b. 각 분류별 백그라운드 컬러와 폰트 컬러는 다르게 설정한다.
+    -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ron이 좋아하는 맛집들</title>
+
+<style>
+    #best {color: red;}
+    #buttons {margin-bottom: 20px;}
+</style>
+
+
+</head>
+
+
+<body>
+<h1> Ron이 좋아하는 맛집을 알아보아요.</h1>
+
+<div id = "buttons">
+    
+    <input type="button" value="HOME" onclick="
+    //document.getElementById('food').style.display='block'
+    document.getElementByTagName('p').style.display='none'
+    ">
+    <!-- HOME 버튼 작동 안 하는 이유를 모르겠음. id로 지정한 food가 working하지 않는 것 같음-->
+    <!-- p로 설정해서 해봤는데도 밀림. 선택자의 우선순위에서 밀리는 것인지? 모르겠음-->
+
+
+    <input type="button" value="한식" onclick="
+    document.getElementById('kor').style.display='block'
+    document.getElementById('jp').style.display='none'
+    document.getElementById('other').style.display='none'
+    ">
+
+    <input type="button" value="일식" onclick="
+    document.getElementById('kor').style.display='none'
+    document.getElementById('jp').style.display='block'
+    document.getElementById('other').style.display='none'
+    ">
+    
+    <input type="button" value="기타" onclick="
+    document.getElementById('kor').style.display='none'
+    document.getElementById('jp').style.display='none'
+    document.getElementById('other').style.display='block'
+    ">
+    
+
+    <input type="button" value="최애" onclick="
+    document.getElementById('kor').style.display='none'
+    document.getElementById('jp').style.display='none'
+    document.getElementById('other').style.display='block'
+    ">
+    
+
+    <!--
+    <button type="button" onclick="
+    if (document.getElementById().value == jap) {style.display='block';}
+    else {style.display='none';}
+    
+    "> Click </button>
+
+    if 안에 document.getelementbyID 넣어서 매칭값은 보이게하고, else는 가릴 수 있는지
+    이것 모르겠으니까 물어보기-->
+
+</div>
+<!-- <div id="food"> --> 
+<p>
+    <div id="kor">
+        <span id="best">- 연탄불꼼장어</span> <br>
+        - 밥플러스 5호점 <br>
+        - 성수칼국수 <br>
+        - 소녀방앗간 <br>
+        - 푸드갤러리빈
+    </div>
+    
+    <div id="jp">
+        <span id="best">- 퍼니주</span> <br>
+        - 멘야코노하 <br>
+        - 오레노카츠
+    </div>
+    
+    
+    <div id="other">
+        <span id="best">- 밸런스포케</span> <br>
+        - 서브웨이 <br>
+        - 서울숲 누룽지통닭
+    </div>
+</p>
+<!--</div>-->
+</body>
+</html>
+
+
